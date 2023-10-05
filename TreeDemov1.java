@@ -148,12 +148,19 @@ class Node{
 	  
 	  
 	  
-	   /*
-	   a method to find the node in the tree
-	   with a largest key
+	   /**
+		* A method that returns the maximum value in the BST
+		* @param root The current node in the BST
+		* @return The maximum value in the BST
 	   */
 	   public int getMax(Node root){
          //implement in here
+		 int max;
+      	 if(root.right == null){
+         	max = root.value;
+         	return max;
+      	 }
+      	 return getMax(root.right);
 	   }
 	   
 	   
