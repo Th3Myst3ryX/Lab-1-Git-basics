@@ -131,13 +131,19 @@ class Node{
 	   
 	   
 	   
-	   /*
-	   a method to find the node in the tree
-	   with a smallest key
+	   /**
+		* A method that returns the minimum value in the BST
+		* @param root The current node in the BST
+		* @return the minimum value in the BST
 	   */
 	   public int getMin(Node root){
          //implement in here
-	      
+		 int min;
+		 if(root.left == null){
+			min = root.value;
+			return min;
+		 }
+		 return getMin(root.left);
 	   }
 	  
 	  
