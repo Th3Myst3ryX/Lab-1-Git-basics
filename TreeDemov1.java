@@ -104,13 +104,29 @@ class Node{
 	   
 	   
 	   
-	   /*
-	   a method to find the node in the tree
-	   with a specific value
+	   /**
+	   *a method to find the node in the tree using a key
+	   *@param root the current in the BST
+	   *@param key the value that is being searched for
+	   *@return true or false depending on if the key is in the BST
 	   */
 	   public boolean find(Node root, int key){
 		 //implement in here
-		  
+		 boolean check = false;
+		 if(root == null){
+			return false;
+		 }
+		 if(root.value == key){
+			check = true;
+			return check;
+		 }
+		 if(check == false && root.left != null){
+			return find(root.left, key);
+		 }
+		 if(check == false && root.right != null){
+			return find(root.right, key);
+		 }
+		 return check;
 	   }
 	   
 	   
