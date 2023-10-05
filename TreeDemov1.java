@@ -86,13 +86,20 @@ class Node{
 	   
 	   
 	   
-	   /*
-	   post-order traversal
+	   /**
+	   *post-order traversal
+	   *Prints out the BST using postOrder traversal method
+	   * @param root The current node in the BST
 	   */
 	  
 	   public void postOrderTraversal(Node root){
          //implement in here
-		   
+		 if(root == null){
+			return;
+		 }
+		 postOrderTraversal(root.left);
+		 postOrderTraversal(root.right);
+		 System.out.print(root.value + ", ");
 	   }
 	   
 	   
