@@ -70,11 +70,18 @@ class Node{
 
 	   
 	   
-	   /*
-	   in-order traversal
+	   /**
+	   *in-order traversal
+	   *Prints out the BST using the inOrder Traversal method
+	   *@param root The current root in the BST
 	   */
 	   public void inOrderTraversal(Node root){
-	      //implement in here
+		if(root == null){
+			return;
+		 }
+		 inOrderTraversal(root.left);
+		 System.out.print(root.value + ", ");
+		 inOrderTraversal(root.right);
 	   }
 	   
 	   
